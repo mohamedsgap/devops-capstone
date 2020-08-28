@@ -19,7 +19,7 @@ pipeline {
          stage('Push Docker Image') {
               steps {
                   withDockerRegistry([url: "", credentialsId: "dockerhub"]) {
-                      sh "docker tag mohamedsgap/mohd-capstone"
+                      sh "docker tag mohd-capstone mohamedsgap/mohd-capstone"
                       sh 'docker push mohamedsgap/mohd-capstone'
                   }
               }
